@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="board">
+        <div class="list">
+            <h2>To Do</h2>
+            <div class="card-list" id="todo-list" ondrop="drop(event, 'todo-list')" ondragover="allowDrop(event)">
+                <div class="task" draggable="true" id="task1">Task 1</div>
+                <div class="task" draggable="true" id="task2">Task 2</div>
+            </div>
+            <div class="add-card">
+                <input type="text" id="task-input" placeholder="Enter a new task">
+                <button onclick="addTask()">Add</button>
+            </div>
+        </div>
+
+        <div class="list">
+            <h2>In Progress</h2>
+            <div class="card-list" id="inprogress-list" ondrop="drop(event, 'inprogress-list')"
+                ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="class-list">
+            <h2>Done</h2>
+            <div class="card-list" id="done-list" ondrop="drop(event, 'done-list')" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
